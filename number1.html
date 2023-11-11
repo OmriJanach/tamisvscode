@@ -1,4 +1,30 @@
+<style>
+    .background--green {
+    background-color: green;  
+    }
+    .background--red {
+    background-color: red;  
+    }
+    #my-button{
+        cursor:pointer
+    }
+</style>
+
+<body>
+    <button id="my-button">yay press meee</button>
+    <!-- <div id="my-button" onclick="myFunction(this)">yay press meee</div> -->
+</body>
+
 <script>
-    alert('omri is the master of league ');
+    // alert('omri is the master of league ');
+    function myFunction() {
+        const element = document.getElementById('my-button')
+        const currentColor = element.style.backgroundColor
+        element.style.backgroundColor = currentColor === 'red' ? 'green' : 'red'
+        // if(currentColor === 'red')
+        //     element.style.backgroundColor = 'green'
+        // else
+        //     element.style.backgroundColor = 'red'
+    }
+    document.getElementById('my-button').onclick = myFunction
 </script>
-<button>yay press meee</button>
